@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="domain.Payable"/>
+    <fullyQualifiedTypeName name="domain.PartTimeEmployee"/>
+    <fullyQualifiedTypeName name="domain.Employee"/>
+    <fullyQualifiedTypeName name="domain.Bird"/>
+    <fullyQualifiedTypeName name="domain.Elephant"/>
+    <fullyQualifiedTypeName name="domain.Dog"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="domain.Vehicle"/>
+    <fullyQualifiedTypeName name="com.sun.tools.javac.util.List"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="domain.ExceptionHandlingExample"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="domain.ContainersNeeded"/>
+    <fullyQualifiedTypeName name="domain.MyException"/>
+    <fullyQualifiedTypeName name="org.apache.logging.log4j.LogManager"/>
+    <fullyQualifiedTypeName name="java.sql.DriverPropertyInfo"/>
+    <fullyQualifiedTypeName name="java.sql.Driver"/>
+    <fullyQualifiedTypeName name="org.apache.logging.log4j.Logger"/>
+</qualifiedTypeNameHistroy>

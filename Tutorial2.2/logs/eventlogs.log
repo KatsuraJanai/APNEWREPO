@@ -1,0 +1,15 @@
+[INFO ] 2021-06-02 19:03:59.408 [main] LoggingExample - Test info message
+[INFO ] 2021-06-02 19:15:18.721 [main] LoggingExample - Test info message
+[DEBUG] 2021-06-02 19:15:18.742 [main] LoggingExample - Test debug message
+[ERROR] 2021-06-02 19:15:18.743 [main] LoggingExample - Test warning message
+[FATAL] 2021-06-02 19:15:18.744 [main] LoggingExample - Test fatal message
+[INFO ] 2021-06-02 19:19:08.992 [main] LoggingExample - Test info message
+[DEBUG] 2021-06-02 19:19:09.030 [main] LoggingExample - Test debug message
+[ERROR] 2021-06-02 19:19:09.042 [main] LoggingExample - Test warning message
+[FATAL] 2021-06-02 19:19:09.044 [main] LoggingExample - Test fatal message
+[TRACE] 2021-06-02 19:19:09.045 [main] LoggingExample - Test trace message
+[INFO ] 2021-06-04 00:43:04.666 [main] LoggingExample - Test info message
+[DEBUG] 2021-06-04 00:43:04.677 [main] LoggingExample - Test debug message
+[ERROR] 2021-06-04 00:43:04.678 [main] LoggingExample - Test warning message
+[FATAL] 2021-06-04 00:43:04.679 [main] LoggingExample - Test fatal message
+[TRACE] 2021-06-04 00:43:04.679 [main] LoggingExample - Test trace message
