@@ -16,6 +16,7 @@ public class Animal {
 		weight = 0;
 	}
 
+	//primary constructor
 	public Animal(String name, int numberOfLegs, double height, double weight) {
 		super();
 		this.name = name;
