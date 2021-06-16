@@ -16,7 +16,7 @@ public class DeserializationDriver {
 		
 		
 		try {
-			FileInputStream fis = new FileInputStream(new File("obj.dat"));
+			FileInputStream fis = new FileInputStream(new File("Employees.ser"));
 			ObjectInputStream ois = new ObjectInputStream(fis);
 			emp2 = (Employee) ois.readObject();
 			System.out.println(emp2);

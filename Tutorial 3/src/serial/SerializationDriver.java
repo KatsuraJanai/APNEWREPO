@@ -19,7 +19,7 @@ public class SerializationDriver {
 		
 		try 
 		{
-			FileOutputStream fos = new FileOutputStream(new File("obj.dat"));
+			FileOutputStream fos = new FileOutputStream(new File("Employees.ser"));
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
 			oos.writeObject(emp1);
 		} catch(FileNotFoundException fe) {
