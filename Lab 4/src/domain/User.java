@@ -1,5 +1,6 @@
 package domain;
 
+import java.io.EOFException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -8,6 +9,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -84,33 +86,37 @@ public class User implements Serializable {
 	
 	
 	public static void WriteToFile(ArrayList<User> list) throws IOException {
+		FileOutputStream fos = new FileOutputStream(new File("file.dat"));
+		ObjectOutputStream oos = new ObjectOutputStream(fos);
 		for(User person : list) 
 		{
-			FileOutputStream fos = new FileOutputStream(new File("file.dat"));
-			ObjectOutputStream oos = new ObjectOutputStream(fos);
 			oos.writeObject(person);
 		}		
+		fos.close();
+		oos.close();	
 	}
 	
 	
 	public static ArrayList<User> ReadFromFile() {
 		ArrayList<User> list = new ArrayList<>();
-		User user = new User();
+		//User user = new User();
 		try {
 		FileInputStream fis = new FileInputStream(new File("file.dat"));
 		ObjectInputStream ois = new ObjectInputStream(fis);
 		while(true) {
 			
-			user = (User) ois.readObject();
+			User user = (User) ois.readObject();
 			list.add(user);
 		}
 		} catch(FileNotFoundException fe) {
 			System.err.println(fe.getMessage());
-		} catch(IOException ioe) {
-			System.err.println(ioe.getMessage());
+		} catch(EOFException eof) {
+			System.err.println(eof.getMessage());
 			return list;
 		} catch(ClassNotFoundException ce) {
 			System.err.println(ce.getMessage());
+		} catch(IOException ioe) {
+			System.err.println(ioe.getMessage());
 		}
 		return list; 
 		

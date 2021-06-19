@@ -11,10 +11,12 @@ public class Driver {
 		// TODO Auto-generated method stub
 
 		//CREATE MY OWN DATE CLASS
-		User user = new User("Pablo", "Sanchez", 24, null);
+		User user = new User("Pabl", "Sanchez", 24, null);
+		User user1 = new User("Pablito", "Sanch", 12, null);
 		ArrayList<User> list = new ArrayList<>();
 		
 		list.add(user);
+		list.add(user1);
 		//System.out.println(user);
 		try {
 			User.WriteToFile(list);
