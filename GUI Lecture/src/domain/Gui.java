@@ -72,7 +72,6 @@ public class Gui {
 	public void setWindowProperties() {
 		frame.setSize(300,300);
 		frame.setLayout(null);
-
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
