@@ -1,0 +1,18 @@
+1. import package java.sql
+2. load and register driver. since we are using mysql the driver is: com.mysql.jdbc.Driver//NOT NEEDED ANYMORE
+3. create connection --> Connection
+4. create a statement --> Statement
+5. execute the query
+6. process the results
+7. close
+
+
+Other Tips
+url should be in form of: "jdbc:mysql://localhost1111/databasename"
+"To register driver use Class.forName(). Class.forName(com.mysql.jdbc.Driver)" Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally UNNECESSARY.
+
+Getting connectiong String or declaring connection. Connection con = DriverManager.getConnection(url,username,password);
+Statement should be declared like: Statement stmt = con.createStatement()
+ResultSet rs = st.executeQuery(String query)
+rs.next() to move cursor from table heading
+To get data from ResultSet use rs.GetInt(Column in database 1st or 2nd column etc) GetString("Name of column in database") etc
