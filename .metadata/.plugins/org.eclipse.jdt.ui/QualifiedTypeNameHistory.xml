@@ -25,12 +25,10 @@
     <fullyQualifiedTypeName name="com.application.controller.CurrencyController"/>
     <fullyQualifiedTypeName name="com.application.view.CurrencyView"/>
     <fullyQualifiedTypeName name="javax.swing.JComboBox"/>
-    <fullyQualifiedTypeName name="javax.swing.JFrame"/>
     <fullyQualifiedTypeName name="javax.swing.JButton"/>
     <fullyQualifiedTypeName name="domain.Gui"/>
     <fullyQualifiedTypeName name="java.awt.GridLayout"/>
     <fullyQualifiedTypeName name="forms.Gui"/>
-    <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
     <fullyQualifiedTypeName name="employee.Address"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
     <fullyQualifiedTypeName name="employee.Employee"/>
@@ -51,4 +49,14 @@
     <fullyQualifiedTypeName name="org.apache.logging.log4j.LogManager"/>
     <fullyQualifiedTypeName name="org.apache.logging.log4j.Logger"/>
     <fullyQualifiedTypeName name="javax.swing.JPanel"/>
+    <fullyQualifiedTypeName name="java.awt.event.ItemListener"/>
+    <fullyQualifiedTypeName name="javax.swing.JFrame"/>
+    <fullyQualifiedTypeName name="javax.swing.JRadioButton"/>
+    <fullyQualifiedTypeName name="javax.swing.JTextField"/>
+    <fullyQualifiedTypeName name="java.net.InetAddress"/>
+    <fullyQualifiedTypeName name="javax.swing.JMenuBar"/>
+    <fullyQualifiedTypeName name="java.awt.event.KeyEvent"/>
+    <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+    <fullyQualifiedTypeName name="java.awt.HeadlessException"/>
+    <fullyQualifiedTypeName name="java.awt.event.InputEvent"/>
 </qualifiedTypeNameHistroy>
