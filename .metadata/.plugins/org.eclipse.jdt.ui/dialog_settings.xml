@@ -2,7 +2,7 @@
 <section name="Workbench">
 	<item key="org.eclipse.jdt.ui.last.selected.jre.kind2" value="2"/>
 	<item key="org.eclipse.jdt.ui.last.selected.execution.enviroment" value="JavaSE-15"/>
-	<item key="org.eclipse.jdt.ui.lastextjar" value="C:\hibernate-release-5.4.30.Final\lib\required"/>
+	<item key="org.eclipse.jdt.ui.lastextjar" value="C:\mysql-connector-java-8.0.23"/>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item key="group_libraries" value="true"/>
 		<item key="layout" value="2"/>

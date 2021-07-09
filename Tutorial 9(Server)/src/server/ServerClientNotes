@@ -1,0 +1,8 @@
+Server
+The java.net.ServerSocket class is used by server applications to obtain a port and listen for client requests.
+IMPORTANT!!!
+IN ORDER TO GET RID OF CLASSNOTFOUND EXCEPTION THE TO BE SERIALIZED MUST BE HAVE SAME PACKAGE PATH.
+FOR EXAMPLE
+IN MY SEVER PROJECT MY  "Student.java" CLASS IS IN THE PACKAGE PATH "models.Student"
+IN MY CLIENT PROJECT MY "Student.Java" CLASS IS IN THE PACKAGE PAGE "models.Student"
+They must be the same!!!!! 
