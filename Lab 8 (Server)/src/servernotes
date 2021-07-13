@@ -1,0 +1,6 @@
+calculation = (Calculation) objIs.readObject();
+			if(calculation.getOperation().equals("+")) {
+				result = calculation.getNumber1() + calculation.getNumber2();
+			} else if(calculation.getOperation().equals("-")) {
+				result = calculation.getNumber1() - calculation.getNumber2();
+			}

@@ -10,18 +10,18 @@ public class Driver {
 		// TODO Auto-generated method stub
 
 		Client client = new Client();
-		Student student = new Student("1001","John","Michealson","john@gmail.com");
+		Student student = new Student("1111","Johnny","Michlson","jon@gmail.com");
 		
-		/*client.sendAction("Add Student");
+		client.sendAction("Add Student");
 		System.out.println("Message sent to server");
 		client.sendStudent(student);
 		System.out.println("Record sent to server");
 		client.receiveResponse();
-		System.out.println("Response received from server");*/
+		System.out.println("Response received from server");
 		
-		client.sendAction("Find Student");
-		client.sendStudentId("121");
-		client.receiveResponse();
+		//client.sendAction("Find Student");
+		//client.sendStudentId("121");
+		//client.receiveResponse();
 		client.closeConnections();
 	}
 
