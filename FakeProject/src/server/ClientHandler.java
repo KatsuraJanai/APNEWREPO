@@ -119,11 +119,16 @@ public class ClientHandler implements Runnable {
 		
 		try {
 			Customer customer = (Customer) objIs.readObject();
+			Customer customer1 = session.get(Customer.class, customer.getCustomerID());
+			if(customer.getCustomerID().equals(customer1.getCustomerID()) &&  customer.getPassword().equals(customer1.getPassword())) {
+				objOs.writeObject("Login Successful");
+			} else if(customer.getCustomerID().equals(customer1.getCustomerID()) &&  !(customer.getPassword().equals(customer1.getPassword()))) {
+				objOs.writeObject("Either your userID and/or password is incorrect");
+			}
 		
-			session.save(customer);
-			session.save(account);
 			transaction.commit();
-			objOs.writeObject("Customer added to database");
+			
+			
 		} catch(ClassNotFoundException e) {
 			if(transaction != null) {
 				transaction.rollback();
