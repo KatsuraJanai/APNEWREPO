@@ -1,15 +1,13 @@
 package models;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.PrimaryKeyJoinColumn;
 
 @Entity
-public class Representative {
+@PrimaryKeyJoinColumn(name="representative_id")
+public class Representative extends Employee {
 
-	@Id
-	@Column(name = "representative_id")
-	private int repID;
+
 	private String status;
 	
 	
@@ -18,7 +16,7 @@ public class Representative {
 	
 	public Representative() {
 		super();
-		this.repID = 0;
+		
 		this.status = "";
 	}
 
@@ -26,29 +24,23 @@ public class Representative {
 
 
 
-	public Representative(int repID, String status) {
-		super();
-		this.repID = repID;
+
+	public Representative(String employeeID, int roleID, String firstName, String lastName, String password,
+			String phoneNumber, String address, String email,String status) {
+		super(employeeID, roleID, firstName, lastName, password, phoneNumber, address, email);
+		// TODO Auto-generated constructor stub
 		this.status = status;
 	}
 
+	
 
 
 
 
-	public int getRepID() {
-		return repID;
+	public Representative(String status) {
+		super();
+		this.status = status;
 	}
-
-
-
-
-
-	public void setRepID(int repID) {
-		this.repID = repID;
-	}
-
-
 
 
 

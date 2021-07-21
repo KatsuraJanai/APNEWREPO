@@ -2,6 +2,8 @@ package models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
@@ -9,6 +11,7 @@ public class Role {
 
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "role_id")
 	private int roleID;
 	@Column(name = "role_name")
@@ -29,6 +32,11 @@ public class Role {
 		this.roleName = roleName;
 	}
 	
+	public Role(String roleName) {
+		super();
+		this.roleName = roleName;
+	}
+
 	public int getRoleID() {
 		return roleID;
 	}

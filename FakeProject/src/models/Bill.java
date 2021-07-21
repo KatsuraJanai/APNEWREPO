@@ -37,6 +37,13 @@ public class Bill {
 	}
 
 
+	public Bill(float amount_due, Date due_date) {
+		super();
+		this.amount_due = amount_due;
+		this.due_date = due_date;
+	}
+
+
 	public int getBillID() {
 		return billID;
 	}

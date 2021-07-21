@@ -1,11 +1,13 @@
 package models;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class AccountCard {
+public class AccountCard implements Serializable {
 
 	@Id
 	@Column(name = "card_id")

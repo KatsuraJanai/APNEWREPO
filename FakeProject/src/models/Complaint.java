@@ -5,6 +5,8 @@ import java.sql.Time;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.hibernate.Session;
@@ -16,10 +18,11 @@ import factory.SessionFactoryBuilder;
 public class Complaint {
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "complaint_id")
 	private int complaintID;
 	@Column(name = "customer_id")
-	private int customerID;
+	private String customerID;
 	private String category;
 	private String description;
 	private String status;
@@ -31,7 +34,7 @@ public class Complaint {
 	
 	public Complaint() {
 		complaintID = 0;
-		customerID = 0;
+		customerID = "";
 		category = "";
 		description = "";
 		status = "";
@@ -41,7 +44,7 @@ public class Complaint {
 	
 	
 	
-	public Complaint(int complaintID, int customerID, String category, String description, String status,
+	public Complaint(int complaintID, String customerID, String category, String description, String status,
 			Time timeGenerated, Date dateCreated) {
 		super();
 		this.complaintID = complaintID;
@@ -56,6 +59,16 @@ public class Complaint {
 
 
 
+	public Complaint(String customerID, String category, String description, String status, Time timeGenerated,
+			Date dateCreated) {
+		super();
+		this.customerID = customerID;
+		this.category = category;
+		this.description = description;
+		this.status = status;
+		this.timeGenerated = timeGenerated;
+		this.dateCreated = dateCreated;
+	}
 
 
 
@@ -69,12 +82,12 @@ public class Complaint {
 	}
 
 
-	public int getCustomerID() {
+	public String getCustomerID() {
 		return customerID;
 	}
 
 
-	public void setCustomerID(int customerID) {
+	public void setCustomerID(String customerID) {
 		this.customerID = customerID;
 	}
 

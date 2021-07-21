@@ -1,38 +1,38 @@
 package server;
 
 import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+import javax.swing.JOptionPane;
+
 public class Server {
+
 	
-	private Socket socket;
 	private ServerSocket serverSocket;
-	private ObjectInputStream objIs;
-	private ObjectOutputStream objOs;
+	private Socket socket;
 	
 	
 	
 	
 	public Server() {
-		obtainPort();
-	}
-	
-	
-	private void obtainPort() {
 		try {
-			serverSocket = new ServerSocket(8888);
+			serverSocket = new ServerSocket(8000);
+			JOptionPane.showMessageDialog(null, "Server Obtained port 8000", "Got port", JOptionPane.INFORMATION_MESSAGE);
+			while(true) {
+				socket = serverSocket.accept();
+				JOptionPane.showMessageDialog(null, "A client has been accepted", "Accept Window", JOptionPane.INFORMATION_MESSAGE);
+				ClientHandler miniServer = new ClientHandler(socket);
+				Thread threadObj = new Thread(miniServer);
+				threadObj.start();
+			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	}
-	
-	private void waitForConnection() {
 		
 	}
 	
-
+	
+	
 }

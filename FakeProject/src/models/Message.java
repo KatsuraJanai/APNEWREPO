@@ -15,6 +15,8 @@ public class Message {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int messageID;
+	@Column(name = "employee_id")
+	private String employeeID;
 	@Column(name = "complaint_id")
 	private int complaintID;
 	private String message;
@@ -24,23 +26,26 @@ public class Message {
 	
 	public Message() {
 		messageID = 0;
+		employeeID = "";
 		complaintID= 0;
 		message = "";
 		dateOfMessage = null;
 	}
 
 
-	public Message(int messageID, int complaintID, String message, Timestamp dateOfMessage) {
+	public Message(int messageID, String employeeID ,int complaintID, String message, Timestamp dateOfMessage) {
 		super();
 		this.messageID = messageID;
+		this.employeeID = employeeID;
 		this.complaintID = complaintID;
 		this.message = message;
 		this.dateOfMessage = dateOfMessage;
 	}
 
 	
-	public Message(int complaintID, String message, Timestamp dateOfMessage) {
+	public Message(String employeeID, int complaintID, String message, Timestamp dateOfMessage) {
 		super();
+		this.employeeID = employeeID;
 		this.complaintID = complaintID;
 		this.message = message;
 		this.dateOfMessage = dateOfMessage;
@@ -55,6 +60,16 @@ public class Message {
 
 	public void setMessageID(int messageID) {
 		this.messageID = messageID;
+	}
+
+
+	public String getEmployeeID() {
+		return employeeID;
+	}
+
+
+	public void setEmployeeID(String employeeID) {
+		this.employeeID = employeeID;
 	}
 
 

@@ -23,6 +23,7 @@ public class Card {
 	private String cardNumber;
 	@Column(name = "expiry_date")
 	private Date expiryDate;
+	private String cvv;
 	
 	
 	
@@ -32,28 +33,31 @@ public class Card {
         this.cardholderName = "";
         this.cardNumber = "";
         this.expiryDate = null;
+        cvv = "";
 	}
 	
 	
-	public Card(int cardID, int cardTypeID, String cardholderName, String cardNumber, Date expiryDate) {
+	public Card(int cardID, int cardTypeID, String cardholderName, String cardNumber, Date expiryDate, String cvv) {
 		super();
 		this.cardID = cardID;
 		this.cardTypeID = cardTypeID;
 		this.cardholderName = cardholderName;
 		this.cardNumber = cardNumber;
 		this.expiryDate = expiryDate;
+		this.cvv = cvv;
 	}
 	
 	
 	
 
 
-	public Card(int cardTypeID, String cardholderName, String cardNumber, Date expiryDate) {
+	public Card(int cardTypeID, String cardholderName, String cardNumber, Date expiryDate,String cvv) {
 		super();
 		this.cardTypeID = cardTypeID;
 		this.cardholderName = cardholderName;
 		this.cardNumber = cardNumber;
 		this.expiryDate = expiryDate;
+		this.cvv = cvv;
 	}
 
 
@@ -104,6 +108,16 @@ public class Card {
 
 	public void setExpiryDate(Date expiryDate) {
 		this.expiryDate = expiryDate;
+	}
+
+
+	public String getCvv() {
+		return cvv;
+	}
+
+
+	public void setCvv(String cvv) {
+		this.cvv = cvv;
 	}
 	
 	

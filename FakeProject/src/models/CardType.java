@@ -32,6 +32,12 @@ public class CardType {
 	}
 
 
+	public CardType(String cardTypeName) {
+		super();
+		this.cardTypeName = cardTypeName;
+	}
+
+
 	public int getCardTypeID() {
 		return cardTypeID;
 	}

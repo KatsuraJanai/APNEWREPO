@@ -21,7 +21,7 @@ public class Payment {
 	private int accountID;
 	@Column(name="bill_id")
 	private int billID;
-	@Column(name="payment_id")
+	@Column(name="payment_date")
 	private Date paymentDate;
 	@Column(name="paid_amount")
 	private float paidAmount;

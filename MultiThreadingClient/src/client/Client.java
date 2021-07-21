@@ -24,11 +24,12 @@ public class Client {
 	
 	public Client() {
 		//connectToServer();
-		initializeComponents();
+		/*initializeComponents();
 		bounds();
 		addComponentsToWindow();
 		setWindowProperties();
-		registerListeners();
+		registerListeners();*/
+		generateRadius();
 	}
 	
 	private void connectToServer() {
@@ -110,9 +111,26 @@ public class Client {
 		});
 	}
 	
+	private void generateRadius() {
+		double radius = 2;
+		connectToServer();
+		configureStreams();
+		try {
+			objOs.writeDouble(radius);
+			objOs.flush();
+			receiveResponse();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}finally {
+			closeConnections();
+		}
+	}
+	
 	private void receiveResponse() {
 		try {
 			double area = objIs.readDouble();
+			System.out.println(area);
 			JOptionPane.showMessageDialog(null, "The area is " + area,"Result Windpw", JOptionPane.INFORMATION_MESSAGE);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

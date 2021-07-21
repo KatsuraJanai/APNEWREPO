@@ -1,0 +1,14 @@
+[INFO ] 2021-07-19 16:35:49.328 [main] Server - The server started thread for client
+[INFO ] 2021-07-19 16:45:29.896 [main] Server - The server started thread for client
+[INFO ] 2021-07-19 17:01:57.113 [main] Server - The server started thread for client
+[INFO ] 2021-07-19 17:12:06.900 [main] Server - The server started thread for client
+[INFO ] 2021-07-19 17:18:36.727 [main] Server - The server started thread for client
+[INFO ] 2021-07-19 17:27:08.542 [main] Server - The server started thread for client
+[INFO ] 2021-07-19 18:38:48.177 [main] Server - The server started thread for client
+[INFO ] 2021-07-19 19:04:29.264 [main] Server - The server started thread for client
+[INFO ] 2021-07-19 19:16:31.250 [main] Server - The server started thread for client
+[INFO ] 2021-07-19 19:25:00.196 [main] Server - The server started thread for client
+[INFO ] 2021-07-19 19:27:07.905 [main] Server - The server started thread for client
+[INFO ] 2021-07-19 19:39:40.008 [main] Server - The server started thread for client
+[INFO ] 2021-07-19 19:58:47.128 [main] Server - The server started thread for client
+[WARN ] 2021-07-19 20:07:30.914 [main] Server - java.net.SocketException: Connection reset

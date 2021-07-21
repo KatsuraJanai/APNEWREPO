@@ -9,7 +9,7 @@ public class Employee {
 	
 	@Id
 	@Column(name = "employee_id")
-	private int employeeID;
+	private String employeeID;
 	@Column(name = "role_id")
 	private int roleID;
 	@Column(name = "first_name")
@@ -25,7 +25,7 @@ public class Employee {
 	
 	public Employee() {
 		super();
-		this.employeeID = 0;
+		this.employeeID = "";
 		this.roleID = 0;
 		this.firstName = "";
 		this.lastName = "";
@@ -36,7 +36,7 @@ public class Employee {
 	}
 
 
-	public Employee(int employeeID, int roleID, String firstName, String lastName, String password, String phoneNumber,
+	public Employee(String employeeID, int roleID, String firstName, String lastName, String password, String phoneNumber,
 			String address, String email) {
 		super();
 		this.employeeID = employeeID;
@@ -50,12 +50,12 @@ public class Employee {
 	}
 
 
-	public int getEmployeeID() {
+	public String getEmployeeID() {
 		return employeeID;
 	}
 
 
-	public void setEmployeeID(int employeeID) {
+	public void setEmployeeID(String employeeID) {
 		this.employeeID = employeeID;
 	}
 

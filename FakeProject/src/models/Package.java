@@ -1,15 +1,26 @@
 package models;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Package {
+public class Package implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "package_id")
-	private int packageID;
+	private String packageID;
+	@Column(name = "package_name")
+	private String packageName;
 	@Column(name = "package_description")
 	private String packageDescription;
 	@Column(name = "package_price")
@@ -17,27 +28,47 @@ public class Package {
 	
 	
 	public Package() {
-		packageID = 0;
+		packageID = "";
 		packageDescription = "";
 		packagePrice = 0;
 	}
 
 
-	public Package(int packageID, String packageDescription, float packagePrice) {
+	public Package(String packageID,String packageName, String packageDescription, float packagePrice) {
 		super();
 		this.packageID = packageID;
+		this.packageName = packageName;
+		this.packageDescription = packageDescription;
+		this.packagePrice = packagePrice;
+	}
+	
+	
+	
+	public Package(String packageName, String packageDescription, float packagePrice) {
+		super();
+		this.packageName = packageName;
 		this.packageDescription = packageDescription;
 		this.packagePrice = packagePrice;
 	}
 
 
-	public int getPackageID() {
+	public String getPackageID() {
 		return packageID;
 	}
 
 
-	public void setPackageID(int packageID) {
+	public void setPackageID(String packageID) {
 		this.packageID = packageID;
+	}
+	
+
+	public String getPackageName() {
+		return packageName;
+	}
+
+
+	public void setPackageName(String packageName) {
+		this.packageName = packageName;
 	}
 
 

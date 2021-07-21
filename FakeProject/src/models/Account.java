@@ -1,21 +1,29 @@
 package models;
 
+import java.io.Serializable;
 import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Account {
+public class Account implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "account_id")
 	private int accountID;
 	@Column(name = "customer_id")
-	private int customerID;
+	private String customerID;
 	@Column(name = "package_id")
-	private int packageID;
+	private String packageID;
 	private String status;
 	@Column(name = "total_amount_due")
 	private float totalAmountDue;
@@ -30,8 +38,8 @@ public class Account {
 	public Account() {
 		super();
 		this.accountID = 0;
-		this.customerID = 0;
-		this.packageID = 0;
+		this.customerID = "";
+		this.packageID = "";
 		this.status = "";
 		this.totalAmountDue = 0;
 		this.previousBalance = 0;
@@ -41,7 +49,7 @@ public class Account {
 	
 	
 	
-	public Account(int accountID, int customerID, int packageID, String status, float totalAmountDue,
+	public Account(int accountID, String customerID, String packageID, String status, float totalAmountDue,
 			float previousBalance, Date paymentDueDate, Date lastPaymentDate) {
 		super();
 		this.accountID = accountID;
@@ -55,22 +63,38 @@ public class Account {
 	}
 	
 	
+	
+	
+	public Account(String customerID, String packageID, String status, float totalAmountDue, float previousBalance,
+			Date paymentDueDate, Date lastPaymentDate) {
+		super();
+		this.customerID = customerID;
+		this.packageID = packageID;
+		this.status = status;
+		this.totalAmountDue = totalAmountDue;
+		this.previousBalance = previousBalance;
+		this.paymentDueDate = paymentDueDate;
+		this.lastPaymentDate = lastPaymentDate;
+	}
+
+
+
 	public int getAccountID() {
 		return accountID;
 	}
 	public void setAccountID(int accountID) {
 		this.accountID = accountID;
 	}
-	public int getCustomerID() {
+	public String getCustomerID() {
 		return customerID;
 	}
-	public void setCustomerID(int customerID) {
+	public void setCustomerID(String customerID) {
 		this.customerID = customerID;
 	}
-	public int getPackageID() {
+	public String getPackageID() {
 		return packageID;
 	}
-	public void setPackageID(int packageID) {
+	public void setPackageID(String packageID) {
 		this.packageID = packageID;
 	}
 	public String getStatus() {
@@ -103,6 +127,8 @@ public class Account {
 	public void setLastPaymentDate(Date lastPaymentDate) {
 		this.lastPaymentDate = lastPaymentDate;
 	}
+	
+	
 	
 	
 	

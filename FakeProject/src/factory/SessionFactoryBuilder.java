@@ -11,6 +11,7 @@ import models.CardType;
 import models.Complaint;
 import models.Customer;
 import models.Employee;
+import models.EmployeeComplaint;
 import models.Message;
 import models.Package;
 import models.Payment;
@@ -29,11 +30,12 @@ public class SessionFactoryBuilder {
 			factory = new Configuration().configure().addAnnotatedClass(Account.class)
 					.addAnnotatedClass(AccountCard.class).addAnnotatedClass(Bill.class).addAnnotatedClass(Card.class)
 					.addAnnotatedClass(CardType.class).addAnnotatedClass(Customer.class).addAnnotatedClass(Complaint.class)
-					.addAnnotatedClass(Employee.class).addAnnotatedClass(Message.class).addAnnotatedClass(Package.class)
-					.addAnnotatedClass(Payment.class).addAnnotatedClass(Representative.class).addAnnotatedClass(Role.class)
-					.addAnnotatedClass(Technician.class).buildSessionFactory();
+					.addAnnotatedClass(Message.class).addAnnotatedClass(Package.class)
+					.addAnnotatedClass(Payment.class).addAnnotatedClass(Role.class).addAnnotatedClass(Representative.class)
+					.addAnnotatedClass(Employee.class).addAnnotatedClass(Technician.class)
+					.addAnnotatedClass(EmployeeComplaint.class).buildSessionFactory();
 		}
-		
+		//REMOVED REPRESENTATIVE EMPLOYEE AND TECHNICIAN FROM ABOVE
 		return factory;
 	}
 	
